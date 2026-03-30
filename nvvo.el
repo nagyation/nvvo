@@ -250,7 +250,7 @@ Example: ((\"41\" \"Wölfnitz\") (\"11\" \"\"))"
           (let ((parts (mapcar (lambda (e)
                                  (let* ((line (caar e))
                                         (dir  (cdar e))
-                                        (times (cdr e))
+					(times (seq-take (cdr e) 2))
 					(time-strs (mapcar (lambda (ts)
 							     (let ((s (format "%sm" (car ts))))
 							       (if (cdr ts)
