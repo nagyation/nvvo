@@ -16,6 +16,20 @@ Uses the [VVO WebAPI](https://github.com/kiliankoe/vvo/blob/main/documentation/w
 
 ## Installation
 
+
+If you have version emacs 30+, you could install it directly using use-packge:
+
+```elisp
+(use-package nvvo
+  :vc (:url  "https://github.com/nagyation/nvvo")
+  :config
+  (setq nvvo-modeline-stop-id "33000016")       ;; your stop ID
+  (setq nvvo-modeline-filters '(("11" "")))      ;; line 11, any direction
+  (setq nvvo-modeline-walk-time 5)               ;; 5 min walk to stop
+  (nvvo-modeline-mode))
+
+```
+
 Copy `nvvo.el` to your load path and add to your init:
 
 ```elisp
